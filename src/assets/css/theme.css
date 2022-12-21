@@ -1754,15 +1754,15 @@
   
   .p-button {
     color: rgba(255, 255, 255, 0.87);
-    background: #636469;
+    background: #2d4d80;
     border: 1px solid #151618;
-    padding: 0.75rem 1.25rem;
+    padding: 0.85rem 1.25rem;
     font-size: 1rem;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
     border-radius: 10%;
   }
   .p-button:enabled:hover, .p-button:not(button):not(a):not(.p-disabled):hover {
-    background: #636469;
+    background: #1E3456;
     color: rgba(255, 255, 255, 0.87);
   }
   .p-button:enabled:active, .p-button:not(button):not(a):not(.p-disabled):active {
@@ -4507,9 +4507,9 @@
   
   .p-menubar {
     padding: 0.5rem 2rem;
-    background: #2C2D33;
+    background: #1d3557;
     color: rgba(255, 255, 255, 0.87);
-    border: 1px solid #17181c;
+    border: 1px solid #547FD3;
   }
   .p-menubar .p-menuitem-link {
     padding: 0.75rem 1.25rem;

@@ -13,8 +13,8 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route element={<Dashboard />} path='/'/>
       <Route element={<Dashboard />} path='/dashboard'/>
+      <Route element={<Dashboard />} path='/'/>
       </Routes></BrowserRouter>
   );
 }
