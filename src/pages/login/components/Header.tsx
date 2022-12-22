@@ -7,7 +7,7 @@ import logo from '../../../assets/images/login_logo.gif'
 
 function Header() {
   return (
-    <div className='w-full h-20 pt-1 bg-darkBlue flex px-20 items-center justify-between'>
+    <div className='w-full h-18 py-2 pb-1.5 bg-darkBlue flex px-20 items-center justify-between'>
         <Heading>
         <img src={logo} width={55} height={55}/>
         </Heading>

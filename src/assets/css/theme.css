@@ -202,7 +202,9 @@
     --purple-900:#432263;
   }
 
-  
+  .p-button {
+    padding: 0.75rem !important;
+  }
 
   
   .p-selectbutton .p-button {
@@ -930,7 +932,6 @@
     padding: 0.5rem 2rem;
     background: #1d3557;
     color: rgba(255, 255, 255, 0.87);
-    border: 1px solid #547FD3;
   }
   .p-menubar .p-menuitem-link {
     padding: 0.75rem 1.25rem;

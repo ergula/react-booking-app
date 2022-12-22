@@ -9,6 +9,12 @@ const Dashboard = () => {
             <SectionMain>
                 <SectionTitle main title="Dashboard">
                 </SectionTitle>
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 mb-4">
+                    <div>test1</div>
+                    <div>test1</div>
+                    <div>test1</div>
+                    <div>test1</div>
+                </div>
             </SectionMain>
         </>
     )
