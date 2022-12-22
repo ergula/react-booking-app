@@ -13,7 +13,11 @@ module.exports = {
       'gray-100': '#DADCDE',
       'hoverBlue': '#325b95',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'background': "url('/src/assets/images/background.png')",
+      },
+    },
   },
   plugins: [],
 }
