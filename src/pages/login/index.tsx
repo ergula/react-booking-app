@@ -5,6 +5,7 @@ import Heading from './components/Heading'
 import Text from './components/Text'
 import TextInput from './components/TextInput'
 import Button from './components/Button'
+import SocialButton from './components/SocialButton'
 
 export default function LoginPage ()  {
   return (
@@ -27,8 +28,19 @@ export default function LoginPage ()  {
          <div className='mb-4 flex justify-start'>
            <Text size='sm'>Forgotten your password ?</Text>
          </div>
-         <div className='mb-4'>
+         <div className='mb-6'>
            <Button>Login</Button>
+         </div>
+         <div className='mb-2'>
+           <Text size='sm'>Or Login With</Text>
+         </div>
+         <div className='flex gap-1 mb-4'>
+           <SocialButton></SocialButton>
+           <SocialButton social='ap'></SocialButton>
+           <SocialButton social='fb'></SocialButton>
+         </div>
+         <div className='mb-2 mt-6'>
+           <Text size='sm'>Create a new Account</Text>
          </div>
        </div>
      </div>
