@@ -17,19 +17,13 @@ const NavigationBar = () => {
     {
       label: 'Add Hotel',
       icon: 'pi pi-plus',
-      command: () => {navigate('/addHotel')}
+      command: () => {navigate('/add-hotel')}
 
     },
     {
       label: 'About Us',
       icon: 'pi pi-table',
-      command: () => {navigate('/aboutUs')}
-
-    },
-    {
-      label: 'Blog',
-      icon: 'pi pi-comment',
-      command: () => {navigate('/blog')}
+      command: () => {navigate('/about-us')}
 
     },
     {
