@@ -2,9 +2,11 @@ import NavigationBar from "../../components/menu";
 
 export default function About() {
   return (
-    <div>
+    <div className="flex flex-col flex-1 align-center flex-center justify-center h-screen">
       <NavigationBar />
-      <div className="flex flex-col flex-1 items-center flex-center h-screen">
+      <div
+        className="flex align-center flex-center justify-center h-screen"
+      >
         <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
           <div className="bg-background rounded-2xl shadow-2xl shadow-darkBlue flex w-full max-w-5xl">
             <div className="w-3/5 p-5">

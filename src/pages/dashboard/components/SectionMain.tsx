@@ -8,6 +8,6 @@ type Props = {
 
 export default function SectionMain({ children }: Props) {
   return (
-    <section className={`p-6 ${containerMax}`}>{children}</section>
+    <section className={`p-4 ${containerMax}`}>{children}</section>
   )
 }

@@ -10,7 +10,6 @@ module.exports = {
       'gray-100t': '#DADCDE24',
       'gray-700': '#606162',
       'cyan-900': '#1D2935',
-      'gray-100': '#DADCDE',
       'hoverBlue': '#325b95',
     },
     extend: {
