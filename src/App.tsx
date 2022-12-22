@@ -7,6 +7,8 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
 import LoginPage from "./pages/login";
 import About from "./pages/about";
+import Contact from "./pages/contact";
+import AddHotel from "./pages/addHotel";
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
       <Routes>
         <Route element={<LoginPage />} path="/" />
         <Route element={<Dashboard />} path="/dashboard" />
-        <Route element={<Dashboard />} path="/addHotel" />
+        <Route element={<AddHotel />} path="/add-hotel" />
         <Route element={<About />} path="/about-us" />
-        <Route element={<Dashboard />} path="/dashboard" />
+        <Route element={<Contact />} path="/contact" />
       </Routes>
     </BrowserRouter>
   );

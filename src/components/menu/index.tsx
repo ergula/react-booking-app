@@ -8,6 +8,10 @@ import Logo from "../../assets/images/logo_white.gif"
 const NavigationBar = () => {
   const navigate = useNavigate();
 
+  const loginClick = () => {
+    navigate('/')
+  }
+
   const items = [
     {
       label: 'Dashboard',
@@ -39,7 +43,7 @@ const NavigationBar = () => {
         start= {
           <img  src={Logo} height="40" width="40" className='mr-6' />
         }
-        end={<Button label="Logout" icon="pi pi-power-off"  />}
+        end={<Button label="Logout" icon="pi pi-power-off" onClick={loginClick} />}
         />
       </div>
     </div>
