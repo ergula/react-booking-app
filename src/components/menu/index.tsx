@@ -31,9 +31,9 @@ const NavigationBar = () => {
 
     },
     {
-      label: 'Contact',
-      icon: 'pi pi-phone',
-      command: () => {navigate('/contact')}
+      label: 'Team',
+      icon: 'pi pi-users',
+      command: () => {navigate('/team')}
     },
   ]
   return (

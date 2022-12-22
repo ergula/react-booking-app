@@ -7,7 +7,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/dashboard";
 import LoginPage from "./pages/login";
 import About from "./pages/about";
-import Contact from "./pages/contact";
+import Team from "./pages/team";
 import AddHotel from "./pages/addHotel";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route element={<Dashboard />} path="/dashboard" />
         <Route element={<AddHotel />} path="/add-hotel" />
         <Route element={<About />} path="/about-us" />
-        <Route element={<Contact />} path="/contact" />
+        <Route element={<Team />} path="/Team" />
       </Routes>
     </BrowserRouter>
   );

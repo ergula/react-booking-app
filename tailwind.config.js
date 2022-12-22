@@ -11,6 +11,7 @@ module.exports = {
       'gray-700': '#606162',
       'cyan-900': '#1D2935',
       'hoverBlue': '#325b95',
+      'black': '#000000'
     },
     extend: {
       backgroundImage: {
