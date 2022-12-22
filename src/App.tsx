@@ -1,6 +1,4 @@
-import React from "react";
-import "./assets/css/noty.css";
-import "./assets/css/metroui.css";
+
 import "./assets/css/theme.css";
 
 import "primereact/resources/primereact.min.css";
