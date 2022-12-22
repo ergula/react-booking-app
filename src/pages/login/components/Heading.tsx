@@ -1,4 +1,4 @@
-import React from 'react'
+import clsx from 'clsx';
 
 interface HeadingProps {
     size?: 'sm' | 'md' | 'lg';
@@ -7,6 +7,12 @@ interface HeadingProps {
 
 export default function Heading({ size= 'md', children}: HeadingProps) {
   return (
-    <div className='text-white font-bold font-sans'>{children}</div>
+    <div className={clsx('text-white font-bold',
+    {
+        'text-md': size == 'sm',
+        'text-lg': size == 'md',
+        'text-xl': size == 'lg',
+    }
+    )}>{children}</div>
   )
 }

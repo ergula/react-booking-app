@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { clsx } from 'clsx'
 interface TextProps {
     size?: 'sm' | 'md' | 'lg';
     children: string;
@@ -7,7 +6,12 @@ interface TextProps {
 
 export default function Text({ size= 'md', children}: TextProps) {
   return (
-    <span className='text-white font-sans'>
+    <span className={clsx('text-white',
+    {
+        'text-xs': size == 'sm',
+        'text-sm': size == 'md',
+        'text-md': size == 'lg',
+    })}>
         {children}
     </span>
   )
