@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { DataTable } from "primereact/datatable";
 import { useNavigate } from "react-router-dom";
 import { confirmDialog } from "primereact/confirmdialog";
 import { Column } from "primereact/column";
+import { Button } from "primereact/button";
 
-import  Delete from "../../../assets/images/delete.svg"
+import DeleteDialog from "./DeleteDialog";
+import Delete from "../../../assets/images/delete.svg";
 import Add from "../../../assets/images/plus.svg";
 
 const DataList = () => {
+  const [showDialog, setShowDialog] = useState(false);
+
   const headerBodyTemplate = (
     <div className="table-header">
       <div className="flex flex-row justify-between">
         <h3 className="mx-2 my-4 text-xl text-black">Hotels</h3>
         <div className="flex mt-2">
-          <img src={Add} alt="add" className="w-10 h-10 mr-4" />
-          <img src={Delete} alt="add" className="w-10 h-10 mr-4" />
+          <button className="w-10 h-10 mr-4">
+          <img src={Add} alt="add" />
+          </button>
+          <button className="w-10 h-10 mr-4">
+            <img
+              src={Delete}
+              alt="delete"
+              onClick={() => setShowDialog(true)}
+            />
+          </button>
+          <DeleteDialog
+            showDialog={showDialog}
+            onHide={() => setShowDialog(false)}
+          />
         </div>
-      </div>
-      <div className="custom-button-set">
-        <img src="" className="custom-icon-button" />
-
-        <img src="" className="custom-icon-button" />
       </div>
     </div>
   );

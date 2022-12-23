@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import NavigationBar from '../../components/menu'
 
 import { DataTable } from "primereact/datatable";
@@ -8,7 +8,9 @@ import { Column } from "primereact/column";
 import document from "../../assets/images/document.gif"
 import DataList from './components/DataList';
 
+
 export default function AddHotel() {
+
   return (
     <div>
         <NavigationBar/>
