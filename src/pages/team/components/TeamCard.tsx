@@ -15,7 +15,6 @@ export default function TeamCard({name, title, id}: Props) {
   return (
     <div className="flex flex-col shadow shadow-black justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-white text-gray-800">
           <img
-            alt=""
             className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500"
             src={`https://source.unsplash.com/100x100/?portrait?${id}`}
           />
@@ -27,7 +26,6 @@ export default function TeamCard({name, title, id}: Props) {
           </div>
           <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
             <a
-              rel="noopener noreferrer"
               href="#"
               title="Email"
               className="text-darkBlue hover:text-orange"
@@ -35,15 +33,13 @@ export default function TeamCard({name, title, id}: Props) {
               <img src={email} alt="" />
             </a>
             <a
-              rel="noopener noreferrer"
               href="#"
               title="Twitter"
               className="text-gray-700 hover:text-orange"
             >
-              <img src={twitter} className="text-orange hover:text-orange" />
+              <img src={twitter} alt=""  />
             </a>
             <a
-              rel="noopener noreferrer"
               href="#"
               title="LinkedIn"
               className="text-darkBlue hover:text-orange"
@@ -51,7 +47,6 @@ export default function TeamCard({name, title, id}: Props) {
              <img src={linkedin} alt="" />
             </a>
             <a
-              rel="noopener noreferrer"
               href="#"
               title="GitHub"
               className="text-darkBlue hover:text-orange"
