@@ -7,11 +7,14 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 
 import DeleteDialog from "./DeleteDialog";
+import FormDialog from "./FormDialog";
+
 import Delete from "../../../assets/images/delete.svg";
 import Add from "../../../assets/images/plus.svg";
 
 const DataList = () => {
   const [showDialog, setShowDialog] = useState(false);
+  const [showFormDialog, setShowFormDialog] = useState(false);
 
   const headerBodyTemplate = (
     <div className="table-header">
@@ -19,8 +22,12 @@ const DataList = () => {
         <h3 className="mx-2 my-4 text-xl text-black">Hotels</h3>
         <div className="flex mt-2">
           <button className="w-10 h-10 mr-4">
-          <img src={Add} alt="add" />
+          <img src={Add} alt="add" onClick={() => setShowFormDialog(true)} />
           </button>
+          <FormDialog 
+          showFormDialog={showFormDialog}
+          onHide={() => setShowFormDialog(false)}
+          />
           <button className="w-10 h-10 mr-4">
             <img
               src={Delete}
