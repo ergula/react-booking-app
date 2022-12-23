@@ -1,10 +1,7 @@
-import React from "react";
 import NavigationBar from "../../components/menu";
 
-import email from "../../assets/images/email.svg";
-import linkedin from "../../assets/images/linkedin.svg";
+
 import TeamCardContainer from "./components/TeamCardContainer";
-import { link } from "fs";
 import TeamCard from "./components/TeamCard";
 
 const Team = () => {
