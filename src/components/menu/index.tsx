@@ -43,7 +43,7 @@ const NavigationBar = () => {
         start= {
           <img  src={Logo} height="40" width="40" className='mr-4' />
         }
-        end={<Button label="Logout" icon="pi pi-power-off" onClick={loginClick} />}
+        end={<Button label="Logout" icon="pi pi-power-off" onClick={loginClick}  />}
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ const DataList = () => {
   const headerBodyTemplate = (
     <div className="table-header">
       <div className="flex flex-row">
-        <h3 className="mx-2 my-4 text-black">Send Invoices</h3>
+        <h3 className="mx-2 my-4 text-xl text-black">Hotels</h3>
       </div>
       <div className="custom-button-set">
         <img src="" className="custom-icon-button" />
