@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
 
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
-import { InputText } from "primereact/inputtext";
+import { Calendar } from "primereact/calendar";
+import { Password } from "primereact/password";
+import { Checkbox } from "primereact/checkbox";
+import { Divider } from "primereact/divider";
 import { Dropdown } from "primereact/dropdown";
-import { InputMask } from "primereact/inputmask";
+import { InputText } from "primereact/inputtext";
+import { classNames } from "primereact/utils";
+
+import { CountryService } from "../../../services/countryService";
+import { useForm, Controller } from "react-hook-form";
 
 interface FormDialogProps {
   showFormDialog: boolean;
@@ -33,72 +40,64 @@ const hotelCapacity = [
 ];
 
 const RenderPage = () => {
-  const [hotelName, setHotelName] = useState("");
-  const [rank, setRank] = useState("");
-  const [hotelNumber, setHotelNumber] = useState("");
-  const [capacity, setCapacity] = useState("");
+  const [countries, setCountries] = useState([]);
+  const [showMessage, setShowMessage] = useState(false);
+  const [formData, setFormData] = useState({});
+  const countryservice = new CountryService();
+  const defaultValues = {
+    name: "",
+    email: "",
+    password: "",
+    date: null,
+    country: null,
+    accept: false,
+  };
+
+  useEffect(() => {
+    countryservice.getCountries().then((data) => setCountries(data));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const {
+    control,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({ defaultValues });
+
+  const onSubmit = (data: any) => {
+    setFormData(data);
+    setShowMessage(true);
+
+    reset();
+  };
+
 
   return (
-    <div className="flex flex-col p-2">
-      <div className="flex flex-row">
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>
-            Hotel Name
-          </label>
-          <InputText
-            style={{ marginLeft: 10, height: 40, width: 280 }}
-            value={hotelName}
-            onChange={(e) => setHotelName(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>
-            Phone Number
-          </label>
-          <InputMask
-              mask="(999) 999-9999"
-              value={hotelNumber}
-              placeholder="(999)9999999"
-              style={{ marginLeft: 10, height: 40, width: 267 }}  
-              onChange={(e) => setHotelNumber(e.target.value)}
-              />
-        </div>
+      <div className="w-full flex flex-col justify-center ">
+          <div className=" w-full ">
+              <div className="text-center flex font-medium text-xl">Form</div>
+              <div className="w-full rounded text-black mx-auto bg-white p-8 border border-darkBlue">
+                  <form action="" className="space-y-6">
+                      <div>
+                          <label htmlFor="" className="text-sm font-bold text-black">Hotel Name</label>
+                          <input type="text" className="w-full p-2 border border-darkBlue rounded mt-1" />
+                      </div>
+                      <div>
+                          <label htmlFor="" className="text-sm font-bold text-black ">Phone Number</label>
+                          <input type="text" className="w-full p-2 border border-darkBlue rounded mt-1" />
+                      </div>
+              
+                      <div>
+                          <label htmlFor="" className="text-sm font-bold text-darkBlue ">Rank</label>
+                          <select name= "" id="" className="w-full p-4 border-darkBlue rounded mt-1" >
+                              <option value="test">1-3</option>
+                              <option value="test2">3-5</option>
+                          </select>
+                      </div>
+                  </form>
+              </div>
+          </div>
       </div>
-      <div className="flex flex-row">
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>Country</label>
-          <InputText style={{ marginLeft: 10, height: 40, width: 280 }} />
-        </div>
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>City</label>
-          <InputText style={{ marginLeft: 10, height: 40, width: 280 }} />
-        </div>
-      </div>
-      <div className="flex flex-row">
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>Rank</label>
-          <Dropdown
-            options={hotelRank}
-            value={rank}
-            onChange={(e) => setRank(e.target.value)}
-            placeholder="Choose Rank"
-            style={{ marginLeft: 10, height: 40, width: 280 }}
-          />
-        </div>
-        <div className="flex flex-col p-2">
-          <label style={{ paddingLeft: 12, paddingBottom: 5 }}>
-            Maximum Capacity
-          </label>
-          <Dropdown
-            options={hotelCapacity}
-            value={capacity}
-            onChange={(e) => setCapacity(e.target.value)}
-            placeholder="Choose Capacity"
-            style={{ marginLeft: 10, height: 40, width: 280 }}
-          />
-        </div>
-      </div>
-    </div>
   );
 };
 
@@ -110,13 +109,15 @@ const FormDialog = ({ showFormDialog, onHide }: FormDialogProps) => {
       style={{}}
       footer={
         <>
-          <Button type="submit" label="Add" onClick={() => onHide()} />
+          <Button type="submit" label="Submit" onClick={() => onHide()} />
         </>
       }
       closable={false}
       modal={true}
       onHide={onHide}
     >
+      <div className="flex justify-content-center flex-column pt-6 px-3">
+      </div>
       {RenderPage()}
     </Dialog>
   );
