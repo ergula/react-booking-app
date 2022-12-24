@@ -1,6 +1,6 @@
-import React from "react";
 import Header from "./components/Header";
 import Heading from "./components/Heading";
+import { useNavigate } from "react-router-dom";
 
 import Text from "./components/Text";
 import TextInput from "./components/TextInput";
@@ -8,6 +8,11 @@ import Button from "./components/Button";
 import SocialButton from "./components/SocialButton";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+
+  const dashboardClick = () => {
+    navigate('/dashboard')
+  }
   return (
     <div className="w-screen bg-background h-screen flex-col overflow-hidden">
       <Header />
@@ -34,7 +39,7 @@ export default function LoginPage() {
           </div>
           {/* Button */}
           <div className="mb-6">
-            <Button>Login</Button>
+            <Button onClick={dashboardClick}>Login</Button>
           </div>
           <div className="mb-2">
             <Text size="sm">Or Login With</Text>
