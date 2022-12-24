@@ -832,12 +832,15 @@
 .p-datatable .p-paginator-top {
   border-width: 1px 0 1px 0;
   border-radius: 0;
+  ;
 }
 .p-datatable .p-paginator-bottom {
   background-color: #f5f5f5;
   border-width: 0 0 1px 0;
   border-color: #253f68;
   border-radius: 0;
+  padding: 10px;
+
 }
 .p-datatable .p-datatable-header {
   background: "white";
@@ -1247,6 +1250,7 @@ p-dialog {
 .p-dropdown {
   background: #636469;
   border: 1px solid #151618;
+  margin-left: 15px;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   border-radius: 6px;
 }
