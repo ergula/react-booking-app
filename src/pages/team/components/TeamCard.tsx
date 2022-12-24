@@ -14,17 +14,21 @@ type Props = {
 export default function TeamCard({name, title, id}: Props) {
   return (
     <div className="flex flex-col shadow shadow-black justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-white text-gray-800">
+      {/* Profile Image */}
           <img
              alt='profile'
             className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full bg-gray-500"
             src={`https://source.unsplash.com/100x100/?portrait?${id}`}
           />
+          {/* Personal Name */}
           <div className="flex-1 my-4">
             <p className="text-xl text-black text-black font-semibold leading-snug">
               {name}
             </p>
+            {/* Title */}
             <p className="text-black">{title}</p>
           </div>
+          {/* Social Icons */}
           <div className="flex items-center justify-center p-3 space-x-3 border-t-2">
             <a
             href='/team'

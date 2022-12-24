@@ -14,6 +14,7 @@ export default function AddHotel() {
   return (
     <div>
         <NavigationBar/>
+        {/* Data List */}
         <div className='flex flex-col mt-2 ml-32 mr-32 py-3.5 align-center'>
             <div className='flex flex-row w-full bg-darkBlue h-auto rounded-md items-center'>
                 <img src={document} width={80} height={80} />

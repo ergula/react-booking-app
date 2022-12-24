@@ -22,6 +22,7 @@ const Dashboard = () => {
       <SectionMain>
         <SectionTitle main title="Dashboard"></SectionTitle>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-4">
+          {/* Info Card */}
           <InfoCard 
           title="What is Lorem Ipsum"
           content="Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -35,10 +36,12 @@ const Dashboard = () => {
           icon={image1}
           />
         </div>
+        {/* Applicaitons Store Card */}
         <StoreCard 
         title="Booking App"
         subTitle="Booking App on iOS & Android. Download the app today."
         />
+        {/* Blog Cards */}
         <BlogCardContainer>
           <BlogCard icon={image3}/>
           <BlogCard icon={image4}/>

@@ -19,7 +19,13 @@ const DataList = () => {
   const headerBodyTemplate = (
     <div className="table-header">
       <div className="flex flex-row justify-between">
+
+        {/* Title */}
+
         <h3 className="mx-2 my-4 text-xl text-black">Hotels</h3>
+
+        {/* icons */}
+
         <div className="flex mt-2">
           <button className="w-10 h-10 mr-4">
           <img src={Add} alt="add" onClick={() => setShowFormDialog(true)} />

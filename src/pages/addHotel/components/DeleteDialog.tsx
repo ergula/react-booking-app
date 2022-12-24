@@ -17,6 +17,9 @@ const DeleteDialog = ({ showDialog, onHide }: InputDialogProps) => {
       footer={
         <>
           <Divider />
+
+          {/* Button Dialog */}
+          
           <Button type="submit" label="Close" onClick={() => onHide()} />
         </>
       }
@@ -24,6 +27,7 @@ const DeleteDialog = ({ showDialog, onHide }: InputDialogProps) => {
       modal={true}
       onHide={onHide}
     >
+      {/* Content Dialog */}
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
         has roots in a piece of classical Latin literature from 45 BC, making it

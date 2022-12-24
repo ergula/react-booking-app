@@ -8,10 +8,12 @@ const Team = () => {
   return (
     <div>
       <NavigationBar />
+      {/* Card Info */}
       <TeamCardContainer
         title="Our Team"
         subTitle="The talented people behind the scenes"
       >
+        {/* Card Content  */}
         <TeamCard  name="Lorem" title="Frontend Developer" id="0"/>
         <TeamCard  name="Lorem" title="Frontend Developer" id="1"/>
         <TeamCard  name="Lorem" title="Frontend Developer" id="2"/>

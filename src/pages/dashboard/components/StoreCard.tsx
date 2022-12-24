@@ -12,10 +12,12 @@ type Props = {
 export default function StoreCard({ title, subTitle, children }: Props) {
   return (
     <div className="w-full  text-center bg-white rounded-lg  sm:p-8">
+      {/* Store Card Title */}
       <h5 className="mb-4 text-3xl font-bold text-gray-900 text-darkBlue">
         {title}
       </h5>
       <p className="mb-5 text-base text-gray-500 sm:text-lg">{subTitle}</p>
+      {/* Store Download Buttons */}
       <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
         <a
           href="#"
