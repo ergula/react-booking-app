@@ -4,7 +4,7 @@ import { Dialog } from "primereact/dialog";
 
 import { useForm } from "react-hook-form";
 
-import Country from "../../../countriesCity.json"
+import Country from "../../../countriesCity.json";
 interface FormDialogProps {
   showFormDialog: boolean;
   onHide: () => void;
@@ -16,7 +16,6 @@ const addHeaderBodyTemplate = (
   </div>
 );
 
-
 const RenderPage = () => {
   const {
     register,
@@ -26,10 +25,7 @@ const RenderPage = () => {
 
   const onSubmit = (data) => console.log("data", data);
 
-
-
   return (
-    
     <div className="w-full flex flex-col justify-center ">
       <div className=" w-full  ">
         <div className="w-full rounded text-black mx-auto p-8 ">
@@ -76,15 +72,11 @@ const RenderPage = () => {
               <label htmlFor="" className="text-sm font-bold text-white ">
                 Country
               </label>
-              <select
-              
-                className="w-full p-4 border-darkBlue rounded mt-1"
-              >
-                <option selected ></option>
-                  {
-                    Country.data.map((result) => (<option id={result.id}>{result.name}</option>))
-                  }                
-                
+              <select className="w-full p-4 border-darkBlue rounded mt-1">
+                <option value="" selected></option>
+                {Country.data.map((result) => (
+                  <option id={result.id}>{result.name}</option>
+                ))}
               </select>
             </div>
             {/* Select Rank Input */}
