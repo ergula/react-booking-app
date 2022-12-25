@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { Dialog } from "primereact/dialog";
-import { Button } from "primereact/button";
-import { Calendar } from "primereact/calendar";
-import { Password } from "primereact/password";
-import { Checkbox } from "primereact/checkbox";
-import { Divider } from "primereact/divider";
-import { Dropdown } from "primereact/dropdown";
-import { InputText } from "primereact/inputtext";
-import { classNames } from "primereact/utils";
 
-import { CountryService } from "../../../services/countryService";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
+import Country from "../../../countriesCity.json"
 interface FormDialogProps {
   showFormDialog: boolean;
   onHide: () => void;
@@ -34,15 +26,10 @@ const RenderPage = () => {
 
   const onSubmit = (data) => console.log("data", data);
 
-  const [countries, setCountries] = useState([]);
-  const countryservice = new CountryService();
 
-
-  useEffect(() => {
-    countryservice.getCountries().then((data) => setCountries(data));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
+    
     <div className="w-full flex flex-col justify-center ">
       <div className=" w-full  ">
         <div className="w-full rounded text-black mx-auto p-8 ">
@@ -90,12 +77,14 @@ const RenderPage = () => {
                 Country
               </label>
               <select
-                name=""
-                id=""
+              
                 className="w-full p-4 border-darkBlue rounded mt-1"
               >
-                <option value="test">1-3</option>
-                <option value="test2">3-5</option>
+                <option selected ></option>
+                  {
+                    Country.data.map((result) => (<option id={result.id}>{result.name}</option>))
+                  }                
+                
               </select>
             </div>
             {/* Select Rank Input */}
